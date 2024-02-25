@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"github.com/AhmedSamy16/01-Book-Directory-Go/application"
+	"github.com/joho/godotenv"
+)
 
 func main() {
-	fmt.Println("Hello world")
+	godotenv.Load()
+
+	app := application.New()
+
+	app.Start()
 }
